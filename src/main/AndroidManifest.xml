@@ -18,7 +18,7 @@
 
             <meta-data
                 android:name="android.app.lib_name"
-                android:value="nativeactivity" />
+                android:value="native-activity" />
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
