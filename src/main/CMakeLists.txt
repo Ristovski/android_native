@@ -14,13 +14,13 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++11 -Wall -Werror")
 set(CMAKE_SHARED_LINKER_FLAGS
     "${CMAKE_SHARED_LINKER_FLAGS} -u ANativeActivity_onCreate")
 
-add_library(PROJECT_NAME SHARED cpp/main.cpp)
+add_library(${PROJECT_NAME} SHARED cpp/main.cpp)
 
-target_include_directories(PROJECT_NAME PRIVATE
+target_include_directories(${PROJECT_NAME} PRIVATE
     ${ANDROID_NDK}/sources/android/native_app_glue)
 
 # add lib dependencies
-target_link_libraries(PROJECT_NAME
+target_link_libraries(${PROJECT_NAME}
     android
     native_app_glue
     EGL
